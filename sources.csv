@@ -1,0 +1,9 @@
+source_id,description,publisher,url,date_pulled,used_for,status,notes
+S01,Corporate announcements (results with audit report / modified opinion disclosures),NSE,https://www.nseindia.com,,Finding flagged companies; board-meeting and results dates,planned,Log each announcement PDF as its own row once downloaded
+S02,Corporate announcements (results with audit report / modified opinion disclosures),BSE,https://www.bseindia.com,,Finding flagged companies; cross-check of NSE dates,planned,Log each announcement PDF as its own row once downloaded
+S03,Historical daily prices of individual stocks (adjusted for splits/bonus),NSE,https://www.nseindia.com,,Stock return outcome,planned,Confirm adjustment method before use; note any delisted stocks
+S04,Nifty 50 index historical values,NSE Indices,https://www.niftyindices.com,,Market benchmark for abnormal return,planned,Use same date range as stock window
+S05,Annual reports (Independent Auditor's Report),Individual companies (investor relations pages),varies by company,,Opinion coding (L2),planned,One row per PDF: company name + FY + exact URL + date pulled
+S06,Standards on Auditing (SA 700 / 705 / 706 / 570 / 701),ICAI,https://www.icai.org,,Codebook definitions,planned,Check current version before citing paragraph numbers
+S07,SEBI LODR Regulations and circulars on audit qualifications / auditor resignation,SEBI,https://www.sebi.gov.in,,Sampling frame and auditor-change rules,planned,Verify regulation and circular numbers before citing
+S08,Companies Act 2013 (auditor appointment and rotation provisions),Ministry of Corporate Affairs,https://www.mca.gov.in,,Separating mandatory rotation from other auditor changes,planned,Verify section numbers before citing
