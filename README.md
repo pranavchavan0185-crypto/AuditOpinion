@@ -22,7 +22,12 @@ Secondary, published data only (annual reports, exchange filings, NSE prices). E
 No synthetic data is used unless declared in `assumptions.md`.
 
 ## How to run
-(To be completed as each layer is built.)
+```
+pip install -r requirements.txt
+python -m pytest tests -q                      # all tests should pass
+python extract.py data/raw_reports/<file>.pdf  # code one audit report (automatic; a human must verify)
+```
+Layer status: L2 extract.py and L3 engine/returns.py built; L1, L4, L5 pending.
 
 ## Disclaimer
 Educational research project. Nothing here is investment advice.

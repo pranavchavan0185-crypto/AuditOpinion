@@ -52,9 +52,11 @@ Matching: 1:1 on industry group and market-cap band (terciles of the sample) for
 
 ## C. Outcomes
 
-**C1. Abnormal return (primary).** Stock buy-and-hold return minus Nifty 50 buy-and-hold return over 250 trading days (about 12 months), starting from the first trading day after the date the audited results (with the audit report) were published on the exchange. Secondary window: 125 trading days.
-*Why:* Market-adjusted return is simple, hand-checkable, and answers "did the market under- or over-react".
-*Risk:* Market-adjusted return ignores beta. Stated as a limitation.
+**C1. Abnormal return (primary).** Stock buy-and-hold return minus Nifty 50 buy-and-hold return over the same two dates.
+Entry = closing price on the date the audited results (with the audit report) were published on the exchange, or the last trading day before it. Exit = closing price 250 trading days (about 12 months) later. Secondary window: 125 trading days.
+*Why entry is the announcement-day close:* results are often released after market hours, so the market's reaction falls on the next trading day, which then sits inside the window. Starting from the day after would leave that reaction out.
+*Why market-adjusted:* simple, hand-checkable, and answers "did the market under- or over-react".
+*Risk:* ignores beta; announcement time is not checked case by case. Stated as limitations.
 
 **C2. Prices adjusted for splits, bonuses and dividends where the source allows.** If a stock is delisted or suspended during the window, the return is measured to the last available price and flagged.
 
@@ -63,7 +65,9 @@ Matching: 1:1 on industry group and market-cap band (terciles of the sample) for
 **C4. Restatement (exploratory only).** Identified from later annual reports and exchange filings that explicitly say figures were restated. If fewer than 5 restatement cases are found, it is reported descriptively and not tested.
 *Why:* Restatement data is not published in one place; undercounting is likely.
 
-**C5. Optional fundamental check:** next-year net loss (yes/no), from published financial statements.
+**C5. Repeat qualification (control variable).** Many filings state, in the Statement on Impact of Audit Qualifications, how often a qualification has repeated. A qualification repeated for years carries little new information. We record `repeat_qualification` (yes/no/not stated) from that statement.
+
+**C6. Optional fundamental check:** next-year net loss (yes/no), from published financial statements.
 
 ## D. Statistics
 

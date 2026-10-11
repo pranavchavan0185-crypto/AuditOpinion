@@ -20,6 +20,8 @@ Rule: code only what the report says. Never infer. If unsure, mark `UNCLEAR` and
 | A | **Adverse.** Statements are materially and pervasively misstated. | SA 705 | heading "Basis for Adverse Opinion"; "do not give a true and fair view" because of the matter described |
 | D | **Disclaimer.** Auditor could not obtain enough evidence and effects could be pervasive. | SA 705 | heading "Basis for Disclaimer of Opinion"; "we do not express an opinion" |
 
+Heading wording varies: "Basis for Qualified Opinion" and "Basis of Qualified Opinion" are both common. Treat them the same.
+
 Decision rule: if the opinion paragraph is headed "Qualified Opinion", "Adverse Opinion" or "Disclaimer of Opinion", code that, regardless of what the notes say.
 
 ## 2. Layer 2 — Flags (each Yes/No; independent of opinion type)
@@ -74,10 +76,11 @@ Company-level category (for sampling): highest severity of the standalone and co
 
 ## 5. Coding sheet columns (`data/coding_sheet.csv`)
 
-`company_name, index_fy, report_type (standalone/consolidated), coder, opinion_type, eom_flag, going_concern_flag, ifc_modified_flag, reason_category, evidence_text, page_ref, source_id`
+`company_name, index_fy, report_type (standalone/consolidated), coder, opinion_type, eom_flag, going_concern_flag, ifc_modified_flag, repeat_qualification, reason_category, evidence_text, page_ref, source_id`
 
 - `evidence_text`: copy the exact sentence(s) that justify the code, in quotation marks.
 - `page_ref`: PDF page number.
+- `repeat_qualification`: yes / no / not stated, from the frequency line of the company's Statement on Impact of Audit Qualifications.
 - Each coder fills their own rows; do not look at your partner's coding until both are complete.
 
 ## 6. Worked examples (fill with real reports; do not invent)
