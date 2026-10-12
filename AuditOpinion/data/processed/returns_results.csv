@@ -1,0 +1,6 @@
+symbol,fy,event_date,opinion_status,window_days,entry_date,exit_date,entry_price,exit_price,stock_return,nifty_return,abnormal_return,status,note
+MOHITIND,FY2022-23,2023-05-29,"coded by engine, hand-check pending",125,2023-05-29,2023-11-28,15.45,17.5,0.132686,0.069416,0.06327,computed,
+MOHITIND,FY2022-23,2023-05-29,"coded by engine, hand-check pending",250,2023-05-29,2024-05-31,15.45,19.95,0.291262,0.211416,0.079846,computed,12-month window (secondary)
+AMRUTANJAN,FY2022-23,2023-05-30,NOT YET CODED (filing not read),125,2023-05-30,2023-11-29,604.95,604.0,-0.00157,0.0785,-0.08007,computed,
+AWHCL,FY2021-22,2022-05-26,NOT YET CODED (filing not read),125,2022-05-26,2022-11-25,242.35,333.8,0.377347,0.144872,0.232475,computed,
+SITINET,FY2022-23,2023-05-30,"coded by engine, hand-check pending",125,,,,,,,,missing: Stock price too stale at entry (0d) or exit (176d).,"EQ file has only 6 rows (30-May to 06-Jun-2023), last close 0.75; trading status after 06-Jun-2023 to be checked"

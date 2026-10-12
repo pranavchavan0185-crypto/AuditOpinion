@@ -107,3 +107,28 @@ def test_mohit_hand_checked_abnormal_return():
     assert str(out["exit_date"].date()) == "2024-05-31"
     assert out["entry_price"] == pytest.approx(15.45) and out["exit_price"] == pytest.approx(19.95)
     assert out["abnormal_return"] == pytest.approx(0.079846, abs=1e-6)
+
+
+def test_amrutanjan_hand_checked_125_day():
+    """HAND-WORKED EXAMPLE 4: AMRUTANJAN, event 30 May 2023, 125 market days (exit 29 Nov 2023).
+    Stock: 604.00/604.95 - 1 = -0.001570     Nifty: 19889.70/18598.65... see example 2 for the
+    index; here the index window is 30-May-2023 to 29-Nov-2023 = +0.0785 (check in nifty50_daily.csv).
+    Abnormal return = -0.001570 - 0.0785 = about -0.0801"""
+    sp = os.path.join(ROOT, "data", "processed", "AMRUTANJAN_prices.csv")
+    npth = os.path.join(ROOT, "data", "processed", "nifty50_daily.csv")
+    if not (os.path.exists(sp) and os.path.exists(npth)):
+        pytest.skip("price files not present")
+    out = abnormal_return(load_prices(sp), load_prices(npth), "2023-05-30", 125)
+    assert out["entry_price"] == pytest.approx(604.95) and out["exit_price"] == pytest.approx(604.00)
+    assert out["stock_return"] == pytest.approx(604.00 / 604.95 - 1)
+    assert out["abnormal_return"] == pytest.approx(-0.0801, abs=1e-3)
+
+
+def test_sitinet_has_no_usable_exit_price_and_engine_refuses():
+    """SITINET's EQ file stops on 06-Jun-2023. The engine must REFUSE rather than guess."""
+    sp = os.path.join(ROOT, "data", "processed", "SITINET_prices.csv")
+    npth = os.path.join(ROOT, "data", "processed", "nifty50_daily.csv")
+    if not (os.path.exists(sp) and os.path.exists(npth)):
+        pytest.skip("price files not present")
+    with pytest.raises(ValueError):
+        abnormal_return(load_prices(sp), load_prices(npth), "2023-05-30", 125)
