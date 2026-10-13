@@ -1,0 +1,5 @@
+company_name,nse_symbol,industry_group,market_cap_band,index_fy,group,stratum,report_date,source_id,matched_to,notes
+Mohit Industries Ltd,MOHITIND,Textiles,,FY2022-23,flagged,Qualified,2023-05-29,S09,,Repeat qualification since 2007; employee benefits (Ind AS 19); coded and return done
+Siti Networks Ltd,SITINET,Cable and broadband distribution,,FY2022-23,flagged,Qualified,2023-05-30,S12,,Q + going-concern MU + EOM (CIRP); auditor DNS & Associates; results after market hours; check delisting/suspension before using prices
+Amrutanjan Health Care Ltd,AMRUTANJAN,Healthcare / consumer products,,FY2022-23,flagged,Qualified,2023-05-30,,,First-time qualification (scope limit: whistle-blower / forensic review); confirm full results PDF from 30-May-2023 announcement
+Antony Waste Handling Cell Ltd,AWHCL,Waste management,,FY2021-22,flagged,Qualified,2022-05-26,,,Verified from filing: Qualified (standalone and consolidated) on recoverability of Rs 805.13 lakh non-current municipal receivables; EOM (COVID + municipal receivables); IFC material weakness; qualified since FY2012-13; board meeting ended 5:13 pm on 26-May-2022 (after market close)
